@@ -6,112 +6,78 @@
 #     \/         \/        \__>    \/ 
 # By: DroidVengeance
 
-FAQ1:
-  item:
-    - emerald block
-  name:
-    - Forums
-  lore:
-    - Link
-  url:
-    - https://legit.land
 
-FAQ2:
-  item:
-    - sign item
-  name:
-    - Lockette
-  lore:
-    - Tutorial
-  url:
-    - https://www.youtube.com/watch?v=CVcU_ZPgF0E
+FAQ1item: emerald block
+FAQ1name: Forums
+FAQ1lore: Link
+FAQ1url: https://legit.land
 
-FAQ3:
-  item:
-    - gold block
-  name:
-    - Trading
-  lore:
-    - Essentials
-  url:
-    - https://www.youtube.com/watch?v=QtEE_f410x0
+FAQ2item: sign item
+FAQ2name: Lockette
+FAQ2lore: Tutorial
+FAQ2url: https://www.youtube.com/watch?v=CVcU_ZPgF0E
 
-FAQ4:
-  item:
-    - chest
-  name:
-    - Shopkeepers
-  lore:
-    - Tutorial
-  url:
-    - https://www.youtube.com/watch?v=ZhLjm6YXWK4t=286
+FAQ3item: gold block
+FAQ3name: Trading
+FAQ3lore: Essentials
+FAQ3url: https://www.youtube.com/watch?v=QtEE_f410x0
 
-FAQ5:
-  item:
-    - eye of ender
-  name:
-    - Want better FPS?
-  lore:
-    - Optifine+17047433518
-  url:
-    - http://www.optifine.net
+FAQ4item: chest
+FAQ4name: Shopkeepers
+FAQ4lore: Tutorial
+FAQ4url: https://www.youtube.com/watch?v=ZhLjm6YXWK4t=286
 
-FAQ6:
-  - item: minecart item
-  - name: Leave of Absence
-  - lore: Taking a Break?
-  - url: https://legit.land/absence
+FAQ5item: eye of ender
+FAQ5name: Want better FPS?
+FAQ5lore: Optifine+17047433518
+FAQ5url: http://www.optifine.net
 
-FAQ7:
-  - item: paper
-  - name: Player Support
-  - lore: Support Thread
-  - url: https://legit.land/support
+FAQ6item: minecart item
+FAQ6name: Leave of Absence
+FAQ6lore: Taking a Break?
+FAQ6url: https://legit.land/absence
 
-FAQ8:
-  - item: map
-  - name: Bug Tracker
-  - lore: Submit Bugs
-  - url: https://legit.land/support
+FAQ7item: paper
+FAQ7name: Player Support
+FAQ7lore: Support Thread
+FAQ7url: https://legit.land/support
 
-FAQ9:
-  - item: enchanted book
-  - name: Custom Enchants
-  - lore: Information on special enchantments!
-  - url: https://legit.land/forum/view_topic/?tid=14
+FAQ8item: map
+FAQ8name: Bug Tracker
+FAQ8lore: Submit Bugs
+FAQ8url: https://legit.land/support
 
-FAQ10:
-  - item: iron ingot
-  - name: Silver Plus Rank
-  - lore: Details
-  - url: https://legit.land/forum/view_topic/?tid=8
+FAQ9item: enchanted book
+FAQ9name: Custom Enchants
+FAQ9lore: Information on special enchantments!
+FAQ9url: https://legit.land/forum/view_topic/?tid=14
 
-FAQ11:
-  - item: gold ingot
-  - name: Gold Plus Rank
-  - lore: Details
-  - url: https://legit.land/forum/view_topic/?tid=8
+FAQ10item: iron ingot
+FAQ10name: Silver Plus Rank
+FAQ10lore: Details
+FAQ10url: https://legit.land/forum/view_topic/?tid=8
 
-FAQ12:
-  - item: pumpkin
-  - name: 1.9 Song
-  - lore: YourMCAdmin||&7YouTube Channel
-  - url: https://www.youtube.com/watch?v=FARvkCUVUW0
+FAQ11item: gold ingot
+FAQ11name: Gold Plus Rank
+FAQ11lore: Details
+FAQ11url: https://legit.land/forum/view_topic/?tid=8
 
-FAQ13:
-  - item: nether star
-  - name: YouTube Rank
-  - lore: Apply for it here!
-  - url: https://legit.land/youtube-application
+FAQ12item: pumpkin
+FAQ12name: 1.9 Song
+FAQ12lore: YourMCAdmin||&7YouTube Channel
+FAQ12url: https://www.youtube.com/watch?v=FARvkCUVUW0
 
-FAQ14:
-  - item: beacon
-  - name: Streamer Rank
-  - lore: Apply for it here!
-  - url: http://legitland.com/Thread-Twitch-Streamer-Rank-Apply-Within
+FAQ13item: nether star
+FAQ13name: YouTube Rank
+FAQ13lore: Apply for it here!
+FAQ13url: https://legit.land/youtube-application
 
-FAQ15:
-  - item: diamond
-  - name: MIT 
-  - lore: Apply for MIT!
-  - url: https://legit.land/apply
+FAQ14item: beacon
+FAQ14name: Streamer Rank
+FAQ14lore: Apply for it here!
+FAQ14url: http://legitland.com/Thread-Twitch-Streamer-Rank-Apply-Within
+
+FAQ15item: diamond
+FAQ15name: MIT 
+FAQ15lore: Apply for MIT!
+FAQ15url: https://legit.land/apply
