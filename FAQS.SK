@@ -32,11 +32,6 @@ on script load:
 		send "[FAQs] &fGenerating config.yml..." to the console
 	send "[FAQs] &fGrabbing all FAQs..." to the console
 
-
-
-
-
-		
 #Command
 command /faq:
 	trigger:
@@ -178,4 +173,3 @@ command /faq:
 		set {_faqs.faq26lore} to single value "FAQ26lore" get of "plugins/FAQs/faqs.yml"
 		set {_faqs.faq26url} to single value "FAQ26url" get of "plugins/FAQs/faqs.yml"
 		format slot 26 of player with {_faqs.faq26item} named "&b%{_faqs.faq26name}%" with lore "&7%{_faqs.faq26lore}%" to close then run [send "&b%{_faqs.faq26url}%"]
-			
