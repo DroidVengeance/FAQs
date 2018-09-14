@@ -43,38 +43,139 @@ command /faq:
 		wait 1 tick
 		open chest with 3 rows named "Frequently Asked Questions" to the player
 		wait 1 tick
-		set {_faqs.faq1item} to single value "FAQ1item" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq0item} to single value "FAQ0item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq0name} to single value "FAQ0name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq0lore} to single value "FAQ0lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq0url} to single value "FAQ0url" get of "plugins/FAQs/faqs.yml"
+		format slot 0 of player with {_faqs.faq0item} named "&b%{_faqs.faq0name}%" with lore "&7%{_faqs.faq0lore}%" to close then run [send "&b%{_faqs.faq0url}%"]
+		set {_faqs.faq1item} to single value "FAQ1item" get of "plugins/FAQs/faqs.yml" parsed as an item
 		set {_faqs.faq1name} to single value "FAQ1name" get of "plugins/FAQs/faqs.yml"
 		set {_faqs.faq1lore} to single value "FAQ1lore" get of "plugins/FAQs/faqs.yml"
 		set {_faqs.faq1url} to single value "FAQ1url" get of "plugins/FAQs/faqs.yml"
-		format slot 0 of player with {_faqs.faq1item} named "&b%{faqs.faq1name}%" with lore "&7%{faqs.faq1lore}%" to close then run [send "&b%{faqs.faq1url}%"]
-		set {_faqs.faq2item} to single value "FAQ2item" get of "plugins/FAQs/faqs.yml"
-		format slot 2 of player with {_faqs.faq2item} named "&b%{faqs.faq2name}%" with lore "&7%{faqs.faq2lore}%" to close then run [send "&b%{faqs.faq2url}%"]
-		set {_faqs.faq3item} to single value "FAQ3item" get of "plugins/FAQs/faqs.yml"
-		format slot 4 of player with {_faqs.faq3item} named "&b%{faqs.faq3name}%" with lore "&7%{faqs.faq3lore}%" to close then run [send "&b%{faqs.faq3url}%"]
-		set {_faqs.faq4item} to single value "FAQ4item" get of "plugins/FAQs/faqs.yml"
-		format slot 6 of player with {_faqs.faq4item} named "&b%{faqs.faq4name}%" with lore "&7%{faqs.faq4lore}%" to close then run [send "&b%{faqs.faq4url}%"]
-		set {_faqs.faq5item} to single value "FAQ5item" get of "plugins/FAQs/faqs.yml"
-		format slot 8 of player with {_faqs.faq5item} named "&b%{faqs.faq5name}%" with lore "&7%{faqs.faq5lore}%" to close then run [send "&b%{faqs.faq5url}%"]
-		set {_faqs.faq6item} to single value "FAQ6item" get of "plugins/FAQs/faqs.yml"
-		format slot 10 of player with {_faqs.faq6item} named "&b%{faqs.faq6name}%" with lore "&7%{faqs.faq6lore}%" to close then run [send "&b%{faqs.faq6url}%"]
-		set {_faqs.faq7item} to single value "FAQ7item" get of "plugins/FAQs/faqs.yml"
-		format slot 12 of player with {_faqs.faq7item} named "&b%{faqs.faq7name}%" with lore "&7%{faqs.faq7lore}%" to close then run [send "&b%{faqs.faq7url}%"]
-		set {_faqs.faq8item} to single value "FAQ8item" get of "plugins/FAQs/faqs.yml"
-		format slot 14 of player with {_faqs.faq8item} named "&b%{faqs.faq8name}%" with lore "&7%{faqs.faq8lore}%" to close then run [send "&b%{faqs.faq8url}%"]
-		set {_faqs.faq9item} to single value "FAQ9item" get of "plugins/FAQs/faqs.yml"
-		format slot 16 of player with {_faqs.faq9item} named "&b%{faqs.faq9name}%" with lore "&7%{faqs.faq9lore}%" to close then run [send "&b%{faqs.faq9url}%"]
-		set {_faqs.faq10item} to single value "FAQ10item" get of "plugins/FAQs/faqs.yml"
-		format slot 18 of player with {_faqs.faq10item} named "&b%{faqs.faq10name}%" with lore "&7%{faqs.faq10lore}%" to close then run [send "&b%{faqs.faq10url}%"]
-		set {_faqs.faq11item} to single value "FAQ11item" get of "plugins/FAQs/faqs.yml"
-		format slot 20 of player with {_faqs.faq11item} named "&b%{faqs.faq11name}%" with lore "&7%{faqs.faq11lore}%" to close then run [send "&b%{faqs.faq11url}%"]
-		set {_faqs.faq12item} to single value "FAQ12item" get of "plugins/FAQs/faqs.yml"
-		format slot 22 of player with {_faqs.faq12item} named "&b%{faqs.faq12name}%" with lore "&7%{faqs.faq12lore}%" to close then run [send "&b%{faqs.faq12url}%"]
-		set {_faqs.faq13item} to single value "FAQ13item" get of "plugins/FAQs/faqs.yml"
-		format slot 24 of player with {_faqs.faq13item} named "&b%{faqs.faq13name}%" with lore "&7%{faqs.faq13lore}%" to close then run [send "&b%{faqs.faq13url}%"]
-		set {_faqs.faq14item} to single value "FAQ14item" get of "plugins/FAQs/faqs.yml"
-		format slot 25 of player with {_faqs.faq14item} named "&b%{faqs.faq14name}%" with lore "&7%{faqs.faq14lore}%" to close then run [send "&b%{faqs.faq14url}%"]
-		set {_faqs.faq15item} to single value "FAQ15item" get of "plugins/FAQs/faqs.yml"
-		format slot 26 of player with {_faqs.faq15item} named "&b%{faqs.faq15name}%" with lore "&7%{faqs.faq15lore}%" to close then run [send "&b%{faqs.faq15url}%"]
-		
+		format slot 1 of player with {_faqs.faq1item} named "&b%{_faqs.faq1name}%" with lore "&7%{_faqs.faq1lore}%" to close then run [send "&b%{_faqs.faq1url}%"]
+		set {_faqs.faq2item} to single value "FAQ2item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq2name} to single value "FAQ2name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq2lore} to single value "FAQ2lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq2url} to single value "FAQ2url" get of "plugins/FAQs/faqs.yml"
+		format slot 2 of player with {_faqs.faq2item} named "&b%{_faqs.faq2name}%" with lore "&7%{_faqs.faq2lore}%" to close then run [send "&b%{_faqs.faq2url}%"]
+		set {_faqs.faq3item} to single value "FAQ3item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq3name} to single value "FAQ3name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq3lore} to single value "FAQ3lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq3url} to single value "FAQ3url" get of "plugins/FAQs/faqs.yml"
+		format slot 3 of player with {_faqs.faq3item} named "&b%{_faqs.faq3name}%" with lore "&7%{_faqs.faq3lore}%" to close then run [send "&b%{_faqs.faq3url}%"]
+		set {_faqs.faq4item} to single value "FAQ4item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq4name} to single value "FAQ4name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq4lore} to single value "FAQ4lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq4url} to single value "FAQ4url" get of "plugins/FAQs/faqs.yml"
+		format slot 4 of player with {_faqs.faq4item} named "&b%{_faqs.faq4name}%" with lore "&7%{_faqs.faq4lore}%" to close then run [send "&b%{_faqs.faq4url}%"]
+		set {_faqs.faq5item} to single value "FAQ5item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq5name} to single value "FAQ5name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq5lore} to single value "FAQ5lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq5url} to single value "FAQ5url" get of "plugins/FAQs/faqs.yml"
+		format slot 5 of player with {_faqs.faq5item} named "&b%{_faqs.faq5name}%" with lore "&7%{_faqs.faq5lore}%" to close then run [send "&b%{_faqs.faq5url}%"]
+		set {_faqs.faq6item} to single value "FAQ6item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq6name} to single value "FAQ6name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq6lore} to single value "FAQ6lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq6url} to single value "FAQ6url" get of "plugins/FAQs/faqs.yml"
+		format slot 6 of player with {_faqs.faq6item} named "&b%{_faqs.faq6name}%" with lore "&7%{_faqs.faq6lore}%" to close then run [send "&b%{_faqs.faq6url}%"]
+		set {_faqs.faq7item} to single value "FAQ7item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq7name} to single value "FAQ7name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq7lore} to single value "FAQ7lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq7url} to single value "FAQ7url" get of "plugins/FAQs/faqs.yml"
+		format slot 7 of player with {_faqs.faq7item} named "&b%{_faqs.faq7name}%" with lore "&7%{_faqs.faq7lore}%" to close then run [send "&b%{_faqs.faq7url}%"]
+		set {_faqs.faq8item} to single value "FAQ8item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq8name} to single value "FAQ8name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq8lore} to single value "FAQ8lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq8url} to single value "FAQ8url" get of "plugins/FAQs/faqs.yml"
+		format slot 8 of player with {_faqs.faq8item} named "&b%{_faqs.faq8name}%" with lore "&7%{_faqs.faq8lore}%" to close then run [send "&b%{_faqs.faq8url}%"]
+		set {_faqs.faq9item} to single value "FAQ9item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq9name} to single value "FAQ9name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq9lore} to single value "FAQ9lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq9url} to single value "FAQ9url" get of "plugins/FAQs/faqs.yml"
+		format slot 9 of player with {_faqs.faq9item} named "&b%{_faqs.faq9name}%" with lore "&7%{_faqs.faq9lore}%" to close then run [send "&b%{_faqs.faq9url}%"]
+		set {_faqs.faq10item} to single value "FAQ10item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq10name} to single value "FAQ10name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq10lore} to single value "FAQ10lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq10url} to single value "FAQ10url" get of "plugins/FAQs/faqs.yml"
+		format slot 10 of player with {_faqs.faq10item} named "&b%{_faqs.faq10name}%" with lore "&7%{_faqs.faq10lore}%" to close then run [send "&b%{_faqs.faq10url}%"]
+		set {_faqs.faq11item} to single value "FAQ11item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq11name} to single value "FAQ11name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq11lore} to single value "FAQ11lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq11url} to single value "FAQ11url" get of "plugins/FAQs/faqs.yml"
+		format slot 11 of player with {_faqs.faq11item} named "&b%{_faqs.faq11name}%" with lore "&7%{_faqs.faq11lore}%" to close then run [send "&b%{_faqs.faq11url}%"]
+		set {_faqs.faq12item} to single value "FAQ12item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq12name} to single value "FAQ12name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq12lore} to single value "FAQ12lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq12url} to single value "FAQ12url" get of "plugins/FAQs/faqs.yml"
+		format slot 12 of player with {_faqs.faq12item} named "&b%{_faqs.faq12name}%" with lore "&7%{_faqs.faq12lore}%" to close then run [send "&b%{_faqs.faq12url}%"]
+		set {_faqs.faq13item} to single value "FAQ13item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq13name} to single value "FAQ13name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq13lore} to single value "FAQ13lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq13url} to single value "FAQ13url" get of "plugins/FAQs/faqs.yml"
+		format slot 13 of player with {_faqs.faq13item} named "&b%{_faqs.faq13name}%" with lore "&7%{_faqs.faq13lore}%" to close then run [send "&b%{_faqs.faq13url}%"]
+		set {_faqs.faq14item} to single value "FAQ14item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq14name} to single value "FAQ14name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq14lore} to single value "FAQ14lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq14url} to single value "FAQ14url" get of "plugins/FAQs/faqs.yml"
+		format slot 14 of player with {_faqs.faq14item} named "&b%{_faqs.faq14name}%" with lore "&7%{_faqs.faq14lore}%" to close then run [send "&b%{_faqs.faq14url}%"]
+		set {_faqs.faq15item} to single value "FAQ15item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq15name} to single value "FAQ15name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq15lore} to single value "FAQ15lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq15url} to single value "FAQ15url" get of "plugins/FAQs/faqs.yml"
+		format slot 15 of player with {_faqs.faq15item} named "&b%{_faqs.faq15name}%" with lore "&7%{_faqs.faq15lore}%" to close then run [send "&b%{_faqs.faq15url}%"]
+		set {_faqs.faq16item} to single value "FAQ16item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq16name} to single value "FAQ16name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq16lore} to single value "FAQ16lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq16url} to single value "FAQ16url" get of "plugins/FAQs/faqs.yml"
+		format slot 16 of player with {_faqs.faq16item} named "&b%{_faqs.faq16name}%" with lore "&7%{_faqs.faq16lore}%" to close then run [send "&b%{_faqs.faq16url}%"]
+		set {_faqs.faq17item} to single value "FAQ17item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq17name} to single value "FAQ17name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq17lore} to single value "FAQ17lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq17url} to single value "FAQ17url" get of "plugins/FAQs/faqs.yml"
+		format slot 17 of player with {_faqs.faq17item} named "&b%{_faqs.faq17name}%" with lore "&7%{_faqs.faq17lore}%" to close then run [send "&b%{_faqs.faq17url}%"]
+		set {_faqs.faq18item} to single value "FAQ18item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq18name} to single value "FAQ18name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq18lore} to single value "FAQ18lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq18url} to single value "FAQ18url" get of "plugins/FAQs/faqs.yml"
+		format slot 18 of player with {_faqs.faq18item} named "&b%{_faqs.faq18name}%" with lore "&7%{_faqs.faq18lore}%" to close then run [send "&b%{_faqs.faq18url}%"]
+		set {_faqs.faq19item} to single value "FAQ19item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq19name} to single value "FAQ19name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq19lore} to single value "FAQ19lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq19url} to single value "FAQ19url" get of "plugins/FAQs/faqs.yml"
+		format slot 19 of player with {_faqs.faq19item} named "&b%{_faqs.faq19name}%" with lore "&7%{_faqs.faq19lore}%" to close then run [send "&b%{_faqs.faq19url}%"]
+		set {_faqs.faq20item} to single value "FAQ20item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq20name} to single value "FAQ20name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq20lore} to single value "FAQ20lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq20url} to single value "FAQ20url" get of "plugins/FAQs/faqs.yml"
+		format slot 20 of player with {_faqs.faq20item} named "&b%{_faqs.faq20name}%" with lore "&7%{_faqs.faq20lore}%" to close then run [send "&b%{_faqs.faq20url}%"]
+		set {_faqs.faq21item} to single value "FAQ21item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq21name} to single value "FAQ21name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq21lore} to single value "FAQ21lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq21url} to single value "FAQ21url" get of "plugins/FAQs/faqs.yml"
+		format slot 21 of player with {_faqs.faq21item} named "&b%{_faqs.faq21name}%" with lore "&7%{_faqs.faq21lore}%" to close then run [send "&b%{_faqs.faq21url}%"]
+		set {_faqs.faq22item} to single value "FAQ22item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq22name} to single value "FAQ22name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq22lore} to single value "FAQ22lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq22url} to single value "FAQ22url" get of "plugins/FAQs/faqs.yml"
+		format slot 22 of player with {_faqs.faq22item} named "&b%{_faqs.faq22name}%" with lore "&7%{_faqs.faq22lore}%" to close then run [send "&b%{_faqs.faq22url}%"]
+		set {_faqs.faq23item} to single value "FAQ23item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq23name} to single value "FAQ23name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq23lore} to single value "FAQ23lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq23url} to single value "FAQ23url" get of "plugins/FAQs/faqs.yml"
+		format slot 23 of player with {_faqs.faq23item} named "&b%{_faqs.faq23name}%" with lore "&7%{_faqs.faq23lore}%" to close then run [send "&b%{_faqs.faq23url}%"]
+		set {_faqs.faq24item} to single value "FAQ24item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq24name} to single value "FAQ24name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq24lore} to single value "FAQ24lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq24url} to single value "FAQ24url" get of "plugins/FAQs/faqs.yml"
+		format slot 24 of player with {_faqs.faq24item} named "&b%{_faqs.faq24name}%" with lore "&7%{_faqs.faq24lore}%" to close then run [send "&b%{_faqs.faq24url}%"]
+		set {_faqs.faq25item} to single value "FAQ25item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq25name} to single value "FAQ25name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq25lore} to single value "FAQ25lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq25url} to single value "FAQ25url" get of "plugins/FAQs/faqs.yml"
+		format slot 25 of player with {_faqs.faq25item} named "&b%{_faqs.faq25name}%" with lore "&7%{_faqs.faq25lore}%" to close then run [send "&b%{_faqs.faq25url}%"]
+		set {_faqs.faq26item} to single value "FAQ26item" get of "plugins/FAQs/faqs.yml" parsed as an item
+		set {_faqs.faq26name} to single value "FAQ26name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq26lore} to single value "FAQ26lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq26url} to single value "FAQ26url" get of "plugins/FAQs/faqs.yml"
+		format slot 26 of player with {_faqs.faq26item} named "&b%{_faqs.faq26name}%" with lore "&7%{_faqs.faq26lore}%" to close then run [send "&b%{_faqs.faq26url}%"]
 			
