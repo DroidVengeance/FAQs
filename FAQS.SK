@@ -83,22 +83,21 @@ on script load:
 #		send "%colored {faqs.prefix}% The most recent Version: &d%{faqs.version}%" to the console
 
 	loop 15 times:
-		set {faqs.count} to {faqs.count}+1
+		set {_count} to {_count}+1
+		send "FAQ%{_count}%" to the console
 		#if {faqs.faq%{_count}%item} is not set:
-		set {faqs.%{faqs.count}%item} to skutil yaml value "FAQ%{faqs.count}%.item" from file "plugins/FAQs/faqs.yml"
-		send "{faqs.%{faqs.count}%item}" to the console
+		set {faqs.faq%{_count}%item} to single value "FAQ%{_count}%item" get of "plugins/FAQs/faqs.yml"
+		send "%{faqs.faq%{_count}%item}%" to the console
 		#if {faqs.faq%{_count}%name} is not set:
-		set {faqs.%{faqs.count}%name} to skutil yaml value "FAQ%{faqs.count}%.name" from file "plugins/FAQs/faqs.yml"
-		send "{faqs.%{faqs.count}%item}" to the console
+		set {faqs.faq%{_count}%name} to single value "FAQ%{_count}%name" get of "plugins/FAQs/faqs.yml"
+		send "%{faqs.faq%{_count}%name}%" to the console
 		#if {faqs.faq%{_count}%lore} is not set:
-		set {faqs.%{faqs.count}%lore} to skutil yaml value "FAQ%{faqs.count}%.lore" from file "plugins/FAQs/faqs.yml"
-		send "{faqs.%{faqs.count}%item}" to the console
+		set {faqs.faq%{_count}%lore} to single value "FAQ%{_count}%lore" get of "plugins/FAQs/faqs.yml"
+		send "%{faqs.faq%{_count}%lore}%" to the console
 		#if {faqs.faq%{_count}%url} is not set:
-		set {faqs.%{faqs.count}%url} to skutil yaml value "FAQ%{faqs.count}%.url" from file "plugins/FAQs/faqs.yml"
-		send "{faqs.%{faqs.count}%item}" to the console
-		send "FAQ%{faq.count}%" to the console
+		set {faqs.faq%{_count}%url} to single value "FAQ%{_count}%url" get of "plugins/FAQs/faqs.yml"
+		send "%{faqs.faq%{_count}%url}%" to the console
 	send "&2[&aFAQs&2] &2DONE!!" to the console
-	delete {faqs.count}
 		
 
 
@@ -112,6 +111,7 @@ command /faqs:
 	trigger:
 		wait 1 tick
 		open chest with 3 rows named "Frequently Asked Questions" to the player
+		wait 1 tick
 		format slot 0 of player with {faqs.faq1item} named "&b%{faqs.faq1name}%" with lore "&7%{faqs.faq1lore}%" to close then run [send "&b%{faqs.faq1url}%" to the player]
 		format slot 2 of player with {faqs.faq2item} named "&b%{faqs.faq2name}%" with lore "&7%{faqs.faq2lore}%" to close then run [send "&b%{faqs.faq2url}%" to the player]
 		format slot 4 of player with {faqs.faq3item} named "&b%{faqs.faq3name}%" with lore "&7%{faqs.faq3lore}%" to close then run [send "&b%{faqs.faq3url}%" to the player]
@@ -128,15 +128,15 @@ command /faqs:
 		format slot 25 of player with {faqs.faq14item} named "&b%{faqs.faq14name}%" with lore "&7%{faqs.faq14lore}%" to close then run [send "&b%{faqs.faq14url}%" to the player]
 		format slot 26 of player with {faqs.faq15item} named "&b%{faqs.faq15name}%" with lore "&7%{faqs.faq15lore}%" to close then run [send "&b%{faqs.faq15url}%" to the player]		
 		
-command faqsdelete:
-	executable by: console
-	trigger:
-		loop 15 times:
-			set {_count} to {_count}+1
-			delete {faqs.faq%{_count}%item}
-			delete {faqs.faq%{_count}%name}
-			delete {faqs.faq%{_count}%lore}
-			delete {faqs.faq%{_count}%url}
-			send "FAQ%{_count}% Deleted!" to the console
+#command faqsdelete:
+#	executable by: console
+#	trigger:
+#		loop 15 times:
+#			set {_count} to {_count}+1
+#			delete {faqs.faq%{_count}%item}
+#			delete {faqs.faq%{_count}%name}
+#			delete {faqs.faq%{_count}%lore}
+#			delete {faqs.faq%{_count}%url}
+#			send "FAQ%{_count}% Deleted!" to the console
 		
 			
