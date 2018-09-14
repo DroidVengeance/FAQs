@@ -25,70 +25,102 @@ on script load:
 		create folder "plugins/FAQs"
 		send "%colored {faqs.prefix}% &fCreating folder..." to the console
 	if file "plugins/FAQs/config.yml" doesn't exists:
-		download from "https://bit.ly/2MXFaCN" to "plugins/FAQs/config.yml"
-		send "%colored {faqs.prefix}% &fGenerating config.yml..." to the console
-	if file "plugins/FAQs/permissions.yml" doesn't exists:
-		download from "https://bit.ly/2QiZ355" to "plugins/FAQs/permissions.yml"
-		send "%colored {faqs.prefix}% &fGenereating permissions.yml..." to the console
 	if file "plugins/FAQs/messages.yml" doesn't exists:
-		download from "https://bit.ly/2CCG42G" to "plugins/FAQs/messages.yml"
-		send "%colored {faqs.prefix}% &fGenerating messages.yml..." to the console
+		download from "https://bit.ly/2xh2VuP" to "plugins/FAQs/faqs.yml"
+		send "%colored {faqs.prefix}% &fGenerating faqs.yml..." to the console
 		send "%colored {faqs.prefix}% &2DONE!!" to the console
 		send "" to the console
-	send "%colored {faqs.prefix}% &fGrabbing settings from the config..." to the console
-	if {faqs.prefix} is not set:
-		set {faqs.prefix} to single value "prefix" get of "plugins/FAQs/config.yml"
-	if {faqs.fastLock} is not set:
-		set {faqs.fastLock} to single value "fastLock" get of "plugins/FAQs/config.yml"
-	if {faqs.fastLockSetTime} is not set:
-		set {faqs.fastLockSetTime} to single value "fastLockSetTime" get of "plugins/FAQs/config.yml"
-	if {faqs.fastfaqsems} is not set:
-		set {faqs.fastfaqsems} to single value "fastfaqsems" get of "plugins/FAQs/config.yml"
-	if {faqs.version} is not set:
-		set {faqs.version} to single value "version" get of "plugins/FAQs/config.yml"
-	send "%colored {faqs.prefix}% &fGrabbing all messages..." to the console
-	if {faqs.msgAlreadyLocked} is not set:
-		set {faqs.msgAlreadyLocked} to single value "msgAlreadyLocked" get of "plugins/FAQs/messages.yml"
-	if {faqs.msgLocked} is not set:
-		set {faqs.msgLocked} to single value "msgLocked" get of "plugins/FAQs/messages.yml"
-	if {faqs.msgDenied} is not set:
-		set {faqs.msgDenied} to single value "msgDenied" get of "plugins/FAQs/messages.yml"
-	if {faqs.usefaqs} is not set:
-		set {faqs.usefaqs} to single value "usefaqs" get of "plugins/FAQs/permissions.yml"
-	send "%colored {faqs.prefix}% &fGrabbing all permissions..." to the console
-	if {faqs.bypassLocked} is not set:
-		set {faqs.bypassLocked} to single value "bypassLocked" get of "plugins/FAQs/permissions.yml"
-	if {faqs.bypassBreak} is not set:
-		set {faqs.bypassBreak} to single value "bypassBreak" get of "plugins/FAQs/permissions.yml"
-	if {faqs.bypassModify} is not set:
-		set {faqs.bypassModify} to single value "bypassModify" get of "plugins/FAQs/permissions.yml"
-	send "%colored {faqs.prefix}% &2DONE! ENJOY!" to the console
-	send "%colored {faqs.prefix}% You are running Version: &d%{faqs.version}%" to the console
-	set {_verCheck} to text from "https://bit.ly/2NwSz43"
-	if {_verCheck} is not {faqs.version}:
-		send "%colored {faqs.prefix}% The most recent Version: &d%{faqs.version}%" to the console
+	send "%colored {faqs.prefix}% &fGrabbing all FAQs..." to the console
+#	if {faqs.faq1Item} is not set:
+#		set {faqs.faq1Item} to single value "FAQ1.item" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq1Name} is not set:
+#		set {faqs.faq1Name} to single value "FAQ1.name" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq1Lore} is not set:
+#		set {faqs.faq1Lore} to single value "FAQ1.lore" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq1URL} is not set:
+#		set {faqs.faq1URL} to single value "FAQ1.url" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq2Item} is not set:
+#		set {faqs.faq2Item} to single value "FAQ2.item" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq2Name} is not set:
+#		set {faqs.faq1Name} to single value "FAQ2.name" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq2Lore} is not set:
+#		set {faqs.faq2Lore} to single value "FAQ2.lore" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq2URL} is not set:
+#		set {faqs.faq2URL} to single value "FAQ2.url" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq3Item} is not set:
+#		set {faqs.faq3Item} to single value "FAQ3.item" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq3Name} is not set:
+#		set {faqs.faq3Name} to single value "FAQ3.name" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq3Lore} is not set:
+#		set {faqs.faq3Lore} to single value "FAQ3.lore" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq3URL} is not set:
+#		set {faqs.faq3URL} to single value "FAQ3.url" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq4Item} is not set:
+#		set {faqs.faq4Item} to single value "FAQ4.item" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq4Name} is not set:
+#		set {faqs.faq4Name} to single value "FAQ4.name" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq4Lore} is not set:
+#		set {faqs.faq4Lore} to single value "FAQ4.lore" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq4URL} is not set:
+#		set {faqs.faq4URL} to single value "FAQ4.url" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq5Item} is not set:
+#		set {faqs.faq5Item} to single value "FAQ5.item" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq5Name} is not set:
+#		set {faqs.faq5Name} to single value "FAQ5.name" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq5Lore} is not set:
+#		set {faqs.faq5Lore} to single value "FAQ5.lore" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq5URL} is not set:
+#		set {faqs.faq5URL} to single value "FAQ5.url" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq6Item} is not set:
+#		set {faqs.faq6Item} to single value "FAQ6.item" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq6Name} is not set:
+#		set {faqs.faq6Name} to single value "FAQ6.name" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq6Lore} is not set:
+#		set {faqs.faq6Lore} to single value "FAQ6.lore" get of "plugins/FAQs/faqs.yml"
+#	if {faqs.faq6URL} is not set:
+#		set {faqs.faq6URL} to single value "FAQ6.url" get of "plugins/FAQs/faqs.yml"
+#	send "%colored {faqs.prefix}% &2DONE! ENJOY!" to the console
+#	send "%colored {faqs.prefix}% You are running Version: &d%{faqs.version}%" to the console
+#	set {_verCheck} to text from "https://bit.ly/2NwSz43"
+#	if {_verCheck} is not {faqs.version}:
+#		send "%colored {faqs.prefix}% The most recent Version: &d%{faqs.version}%" to the console
+
+	loop 15 times:
+		set {_count} to {_count}+1
+		if {faqs.faq%{_count}%Item} is not set:
+			set {faqs.faq%{_count}%Item} to single value "FAQ%{_count}%.item" get of "plugins/FAQs/faqs.yml"
+		if {faqs.faq%{_count}%Name} is not set:
+			set {faqs.faq%{_count}%Name} to single value "FAQ%{_count}%.name" get of "plugins/FAQs/faqs.yml"
+		if {faqs.faq%{_count}%Lore} is not set:
+			set {faqs.faq%{_count}%Lore} to single value "FAQ%{_count}%.lore" get of "plugins/FAQs/faqs.yml"
+		if {faqs.faq%{_count}%URL} is not set:
+			set {faqs.faq%{_count}%URL} to single value "FAQ%{_count}%.url" get of "plugins/FAQs/faqs.yml"
+		send "FAQ%{_count}%" to the console
 		
+
+
+
+
+
+
 		
 #Command
-
-
-
-
-command /faq:
+command /faqs:
 	trigger:
+		wait 1 tick
 		open chest with 3 rows named "Frequently Asked Questions" to the player
-		format slot 0 of player with {@faq1item} named "&b{@faq1name}" with lore "&7{@faq1lore}" to close then run [send "&b{@faq1url}" to the player]
-		format slot 2 of player with {@faq2item} named "&b{@faq2name}" with lore "&7{@faq2lore}" to close then run [send "&b{@faq2url}" to the player]
-		format slot 4 of player with {@faq3item} named "&b{@faq3name}" with lore "&7{@faq3lore}" to close then run [send "&b{@faq3url}" to the player]
-		format slot 6 of player with {@faq4item} named "&b{@faq4name}" with lore "&7{@faq4lore}" to close then run [send "&b{@faq4url}" to the player]
-		format slot 8 of player with {@faq5item} named "&b{@faq5name}" with lore "&7{@faq5lore}" to close then run [send "&b{@faq5url}" to the player]
-		format slot 10 of player with {@faq6item} named "&b{@faq6name}" with lore "&7{@faq6lore}" to close then run [send "&b{@faq6url}" to the player]
-		format slot 12 of player with {@faq7item} named "&b{@faq7name}" with lore "&7{@faq7lore}" to close then run [send "&b{@faq7url}" to the player]
-		format slot 14 of player with {@faq8item} named "&b{@faq8name}" with lore "&7{@faq8lore}" to close then run [send "&b{@faq8url}" to the player]
-		format slot 16 of player with {@faq9item} named "&b{@faq9name}" with lore "&7{@faq9lore}" to close then run [send "&b{@faq9url}" to the player]
-		format slot 18 of player with {@faq10item} named "&b{@faq10name}" with lore "&7{@faq10lore}" to close then run [send "&b{@faq10url}" to the player]
-		format slot 20 of player with {@faq11item} named "&b{@faq11name}" with lore "&7{@faq11lore}" to close then run [send "&b{@faq11url}" to the player]
-		format slot 22 of player with {@faq12item} named "&b{@faq12name}" with lore "&7{@faq12lore}" to close then run [send "&b{@faq12url}" to the player]
-		format slot 24 of player with {@faq13item} named "&b{@faq13name}" with lore "&7{@faq13lore}" to close then run [send "&b{@faq13url}" to the player]
-		format slot 25 of player with {@faq13.5item} named "&b{@faq13.5name}" with lore "&7{@faq13.5lore}" to close then run [send "&b{@faq13.5url}" to the player]
-		format slot 26 of player with {@faq14item} named "&b{@faq14name}" with lore "&7{@faq14lore}" to close then run [send "&b{@faq14url}" to the player]		
+		set slot 0 of player with {@faq1item} named "&b{@faq1name}" with lore "&7{@faq1lore}" to close then run [send "&b{@faq1url}" to the player]
+		set slot 2 of player with {@faq2item} named "&b{@faq2name}" with lore "&7{@faq2lore}" to close then run [send "&b{@faq2url}" to the player]
+		set slot 4 of player with {@faq3item} named "&b{@faq3name}" with lore "&7{@faq3lore}" to close then run [send "&b{@faq3url}" to the player]
+		set slot 6 of player with {@faq4item} named "&b{@faq4name}" with lore "&7{@faq4lore}" to close then run [send "&b{@faq4url}" to the player]
+		set slot 8 of player with {@faq5item} named "&b{@faq5name}" with lore "&7{@faq5lore}" to close then run [send "&b{@faq5url}" to the player]
+		set slot 10 of player with {@faq6item} named "&b{@faq6name}" with lore "&7{@faq6lore}" to close then run [send "&b{@faq6url}" to the player]
+		set slot 12 of player with {@faq7item} named "&b{@faq7name}" with lore "&7{@faq7lore}" to close then run [send "&b{@faq7url}" to the player]
+		set slot 14 of player with {@faq8item} named "&b{@faq8name}" with lore "&7{@faq8lore}" to close then run [send "&b{@faq8url}" to the player]
+		set slot 16 of player with {@faq9item} named "&b{@faq9name}" with lore "&7{@faq9lore}" to close then run [send "&b{@faq9url}" to the player]
+		set slot 18 of player with {@faq10item} named "&b{@faq10name}" with lore "&7{@faq10lore}" to close then run [send "&b{@faq10url}" to the player]
+		set slot 20 of player with {@faq11item} named "&b{@faq11name}" with lore "&7{@faq11lore}" to close then run [send "&b{@faq11url}" to the player]
+		set slot 22 of player with {@faq12item} named "&b{@faq12name}" with lore "&7{@faq12lore}" to close then run [send "&b{@faq12url}" to the player]
+		set slot 24 of player with {@faq13item} named "&b{@faq13name}" with lore "&7{@faq13lore}" to close then run [send "&b{@faq13url}" to the player]
+		set slot 25 of player with {@faq13.5item} named "&b{@faq13.5name}" with lore "&7{@faq13.5lore}" to close then run [send "&b{@faq13.5url}" to the player]
+		set slot 26 of player with {@faq14item} named "&b{@faq14name}" with lore "&7{@faq14lore}" to close then run [send "&b{@faq14url}" to the player]		
