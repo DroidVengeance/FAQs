@@ -13,93 +13,24 @@
 
 #Generate all the files and load variables#
 on script load:
-	send "&c&m-----------------------------------------------------" to the console
-	send "&6&l________________   ________" to the console
-	send "&6&l\_   _____/  _  \  \_____  \   ______" to the console
-	send "&6&l |    __)/  /_\  \  /  / \  \ /  ___/" to the console
-	send "&6&l |     \/    |    \/   \_/.  \\___ \" to the console
-	send "&6&l \___  /\____|__  /\_____\ \_/____  >" to the console
-	send "&6&l     \/         \/        \__>    \/" to the console
-	send "&c&m-----------------------------------------------------" to the console
+	send "-----------------------------------------------------" to the console
+	send "________________   ________" to the console
+	send "\_   _____/  _  \  \_____  \   ______" to the console
+	send " |    __)/  /_\  \  /  / \  \ /  ___/" to the console
+	send " |     \/    |    \/   \_/.  \\___ \" to the console
+	send " \___  /\____|__  /\_____\ \_/____  >" to the console
+	send "     \/         \/        \__>    \/" to the console
+	send "-----------------------------------------------------" to the console
 	if folder "plugins/FAQs" doesn't exists:
 		create folder "plugins/FAQs"
-		send "&2[&aFAQs&2] &fCreating folder..." to the console
+		send "[FAQs] &fCreating folder..." to the console
 	if file "plugins/FAQs/faqs.yml" doesn't exists:
 		download from "https://bit.ly/2xh2VuP" to "plugins/FAQs/faqs.yml"
-		send "&2[&aFAQs&2] &fGenerating faqs.yml..." to the console
-	send "&2[&aFAQs&2] &fGrabbing all FAQs..." to the console
-#	if {faqs.faq1Item} is not set:
-#		set {faqs.faq1Item} to single value "FAQ1.item" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq1Name} is not set:
-#		set {faqs.faq1Name} to single value "FAQ1.name" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq1Lore} is not set:
-#		set {faqs.faq1Lore} to single value "FAQ1.lore" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq1URL} is not set:
-#		set {faqs.faq1URL} to single value "FAQ1.url" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq2Item} is not set:
-#		set {faqs.faq2Item} to single value "FAQ2.item" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq2Name} is not set:
-#		set {faqs.faq1Name} to single value "FAQ2.name" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq2Lore} is not set:
-#		set {faqs.faq2Lore} to single value "FAQ2.lore" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq2URL} is not set:
-#		set {faqs.faq2URL} to single value "FAQ2.url" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq3Item} is not set:
-#		set {faqs.faq3Item} to single value "FAQ3.item" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq3Name} is not set:
-#		set {faqs.faq3Name} to single value "FAQ3.name" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq3Lore} is not set:
-#		set {faqs.faq3Lore} to single value "FAQ3.lore" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq3URL} is not set:
-#		set {faqs.faq3URL} to single value "FAQ3.url" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq4Item} is not set:
-#		set {faqs.faq4Item} to single value "FAQ4.item" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq4Name} is not set:
-#		set {faqs.faq4Name} to single value "FAQ4.name" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq4Lore} is not set:
-#		set {faqs.faq4Lore} to single value "FAQ4.lore" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq4URL} is not set:
-#		set {faqs.faq4URL} to single value "FAQ4.url" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq5Item} is not set:
-#		set {faqs.faq5Item} to single value "FAQ5.item" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq5Name} is not set:
-#		set {faqs.faq5Name} to single value "FAQ5.name" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq5Lore} is not set:
-#		set {faqs.faq5Lore} to single value "FAQ5.lore" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq5URL} is not set:
-#		set {faqs.faq5URL} to single value "FAQ5.url" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq6Item} is not set:
-#		set {faqs.faq6Item} to single value "FAQ6.item" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq6Name} is not set:
-#		set {faqs.faq6Name} to single value "FAQ6.name" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq6Lore} is not set:
-#		set {faqs.faq6Lore} to single value "FAQ6.lore" get of "plugins/FAQs/faqs.yml"
-#	if {faqs.faq6URL} is not set:
-#		set {faqs.faq6URL} to single value "FAQ6.url" get of "plugins/FAQs/faqs.yml"
-#	send "%colored {faqs.prefix}% &2DONE! ENJOY!" to the console
-#	send "%colored {faqs.prefix}% You are running Version: &d%{faqs.version}%" to the console
-#	set {_verCheck} to text from "https://bit.ly/2NwSz43"
-#	if {_verCheck} is not {faqs.version}:
-#		send "%colored {faqs.prefix}% The most recent Version: &d%{faqs.version}%" to the console
-
-	loop 15 times:
-		set {_count} to {_count}+1
-		send "FAQ%{_count}%" to the console
-		#if {faqs.faq%{_count}%item} is not set:
-		set {faqs.faq%{_count}%item} to single value "FAQ%{_count}%item" get of "plugins/FAQs/faqs.yml"
-		send "%{faqs.faq%{_count}%item}%" to the console
-		#if {faqs.faq%{_count}%name} is not set:
-		set {faqs.faq%{_count}%name} to single value "FAQ%{_count}%name" get of "plugins/FAQs/faqs.yml"
-		send "%{faqs.faq%{_count}%name}%" to the console
-		#if {faqs.faq%{_count}%lore} is not set:
-		set {faqs.faq%{_count}%lore} to single value "FAQ%{_count}%lore" get of "plugins/FAQs/faqs.yml"
-		send "%{faqs.faq%{_count}%lore}%" to the console
-		#if {faqs.faq%{_count}%url} is not set:
-		set {faqs.faq%{_count}%url} to single value "FAQ%{_count}%url" get of "plugins/FAQs/faqs.yml"
-		send "%{faqs.faq%{_count}%url}%" to the console
-	send "&2[&aFAQs&2] &2DONE!!" to the console
-		
-
+		send "[FAQs] &fGenerating faqs.yml..." to the console
+	if file "plugins/FAQs/config.yml" doesn't exists:
+		download from "https://bit.ly/2QpmpGm" to "plugins/FAQs/config.yml"
+		send "[FAQs] &fGenerating config.yml..." to the console
+	send "[FAQs] &fGrabbing all FAQs..." to the console
 
 
 
@@ -107,36 +38,43 @@ on script load:
 
 		
 #Command
-command /faqs:
+command /faq:
 	trigger:
 		wait 1 tick
 		open chest with 3 rows named "Frequently Asked Questions" to the player
 		wait 1 tick
-		format slot 0 of player with {faqs.faq1item} named "&b%{faqs.faq1name}%" with lore "&7%{faqs.faq1lore}%" to close then run [send "&b%{faqs.faq1url}%" to the player]
-		format slot 2 of player with {faqs.faq2item} named "&b%{faqs.faq2name}%" with lore "&7%{faqs.faq2lore}%" to close then run [send "&b%{faqs.faq2url}%" to the player]
-		format slot 4 of player with {faqs.faq3item} named "&b%{faqs.faq3name}%" with lore "&7%{faqs.faq3lore}%" to close then run [send "&b%{faqs.faq3url}%" to the player]
-		format slot 6 of player with {faqs.faq4item} named "&b%{faqs.faq4name}%" with lore "&7%{faqs.faq4lore}%" to close then run [send "&b%{faqs.faq4url}%" to the player]
-		format slot 8 of player with {faqs.faq5item} named "&b%{faqs.faq5name}%" with lore "&7%{faqs.faq5lore}%" to close then run [send "&b%{faqs.faq5url}%" to the player]
-		format slot 10 of player with {faqs.faq6item} named "&b%{faqs.faq6name}%" with lore "&7%{faqs.faq6lore}%" to close then run [send "&b%{faqs.faq6url}%" to the player]
-		format slot 12 of player with {faqs.faq7item} named "&b%{faqs.faq7name}%" with lore "&7%{faqs.faq7lore}%" to close then run [send "&b%{faqs.faq7url}%" to the player]
-		format slot 14 of player with {faqs.faq8item} named "&b%{faqs.faq8name}%" with lore "&7%{faqs.faq8lore}%" to close then run [send "&b%{faqs.faq8url}%" to the player]
-		format slot 16 of player with {faqs.faq9item} named "&b%{faqs.faq9name}%" with lore "&7%{faqs.faq9lore}%" to close then run [send "&b%{faqs.faq9url}%" to the player]
-		format slot 18 of player with {faqs.faq10item} named "&b%{faqs.faq10name}%" with lore "&7%{faqs.faq10lore}%" to close then run [send "&b%{faqs.faq10url}%" to the player]
-		format slot 20 of player with {faqs.faq11item} named "&b%{faqs.faq11name}%" with lore "&7%{faqs.faq11lore}%" to close then run [send "&b%{faqs.faq11url}%" to the player]
-		format slot 22 of player with {faqs.faq12item} named "&b%{faqs.faq12name}%" with lore "&7%{faqs.faq12lore}%" to close then run [send "&b%{faqs.faq12url}%" to the player]
-		format slot 24 of player with {faqs.faq13item} named "&b%{faqs.faq13name}%" with lore "&7%{faqs.faq13lore}%" to close then run [send "&b%{faqs.faq13url}%" to the player]
-		format slot 25 of player with {faqs.faq14item} named "&b%{faqs.faq14name}%" with lore "&7%{faqs.faq14lore}%" to close then run [send "&b%{faqs.faq14url}%" to the player]
-		format slot 26 of player with {faqs.faq15item} named "&b%{faqs.faq15name}%" with lore "&7%{faqs.faq15lore}%" to close then run [send "&b%{faqs.faq15url}%" to the player]		
-		
-#command faqsdelete:
-#	executable by: console
-#	trigger:
-#		loop 15 times:
-#			set {_count} to {_count}+1
-#			delete {faqs.faq%{_count}%item}
-#			delete {faqs.faq%{_count}%name}
-#			delete {faqs.faq%{_count}%lore}
-#			delete {faqs.faq%{_count}%url}
-#			send "FAQ%{_count}% Deleted!" to the console
+		set {_faqs.faq1item} to single value "FAQ1item" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq1name} to single value "FAQ1name" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq1lore} to single value "FAQ1lore" get of "plugins/FAQs/faqs.yml"
+		set {_faqs.faq1url} to single value "FAQ1url" get of "plugins/FAQs/faqs.yml"
+		format slot 0 of player with {_faqs.faq1item} named "&b%{faqs.faq1name}%" with lore "&7%{faqs.faq1lore}%" to close then run [send "&b%{faqs.faq1url}%"]
+		set {_faqs.faq2item} to single value "FAQ2item" get of "plugins/FAQs/faqs.yml"
+		format slot 2 of player with {_faqs.faq2item} named "&b%{faqs.faq2name}%" with lore "&7%{faqs.faq2lore}%" to close then run [send "&b%{faqs.faq2url}%"]
+		set {_faqs.faq3item} to single value "FAQ3item" get of "plugins/FAQs/faqs.yml"
+		format slot 4 of player with {_faqs.faq3item} named "&b%{faqs.faq3name}%" with lore "&7%{faqs.faq3lore}%" to close then run [send "&b%{faqs.faq3url}%"]
+		set {_faqs.faq4item} to single value "FAQ4item" get of "plugins/FAQs/faqs.yml"
+		format slot 6 of player with {_faqs.faq4item} named "&b%{faqs.faq4name}%" with lore "&7%{faqs.faq4lore}%" to close then run [send "&b%{faqs.faq4url}%"]
+		set {_faqs.faq5item} to single value "FAQ5item" get of "plugins/FAQs/faqs.yml"
+		format slot 8 of player with {_faqs.faq5item} named "&b%{faqs.faq5name}%" with lore "&7%{faqs.faq5lore}%" to close then run [send "&b%{faqs.faq5url}%"]
+		set {_faqs.faq6item} to single value "FAQ6item" get of "plugins/FAQs/faqs.yml"
+		format slot 10 of player with {_faqs.faq6item} named "&b%{faqs.faq6name}%" with lore "&7%{faqs.faq6lore}%" to close then run [send "&b%{faqs.faq6url}%"]
+		set {_faqs.faq7item} to single value "FAQ7item" get of "plugins/FAQs/faqs.yml"
+		format slot 12 of player with {_faqs.faq7item} named "&b%{faqs.faq7name}%" with lore "&7%{faqs.faq7lore}%" to close then run [send "&b%{faqs.faq7url}%"]
+		set {_faqs.faq8item} to single value "FAQ8item" get of "plugins/FAQs/faqs.yml"
+		format slot 14 of player with {_faqs.faq8item} named "&b%{faqs.faq8name}%" with lore "&7%{faqs.faq8lore}%" to close then run [send "&b%{faqs.faq8url}%"]
+		set {_faqs.faq9item} to single value "FAQ9item" get of "plugins/FAQs/faqs.yml"
+		format slot 16 of player with {_faqs.faq9item} named "&b%{faqs.faq9name}%" with lore "&7%{faqs.faq9lore}%" to close then run [send "&b%{faqs.faq9url}%"]
+		set {_faqs.faq10item} to single value "FAQ10item" get of "plugins/FAQs/faqs.yml"
+		format slot 18 of player with {_faqs.faq10item} named "&b%{faqs.faq10name}%" with lore "&7%{faqs.faq10lore}%" to close then run [send "&b%{faqs.faq10url}%"]
+		set {_faqs.faq11item} to single value "FAQ11item" get of "plugins/FAQs/faqs.yml"
+		format slot 20 of player with {_faqs.faq11item} named "&b%{faqs.faq11name}%" with lore "&7%{faqs.faq11lore}%" to close then run [send "&b%{faqs.faq11url}%"]
+		set {_faqs.faq12item} to single value "FAQ12item" get of "plugins/FAQs/faqs.yml"
+		format slot 22 of player with {_faqs.faq12item} named "&b%{faqs.faq12name}%" with lore "&7%{faqs.faq12lore}%" to close then run [send "&b%{faqs.faq12url}%"]
+		set {_faqs.faq13item} to single value "FAQ13item" get of "plugins/FAQs/faqs.yml"
+		format slot 24 of player with {_faqs.faq13item} named "&b%{faqs.faq13name}%" with lore "&7%{faqs.faq13lore}%" to close then run [send "&b%{faqs.faq13url}%"]
+		set {_faqs.faq14item} to single value "FAQ14item" get of "plugins/FAQs/faqs.yml"
+		format slot 25 of player with {_faqs.faq14item} named "&b%{faqs.faq14name}%" with lore "&7%{faqs.faq14lore}%" to close then run [send "&b%{faqs.faq14url}%"]
+		set {_faqs.faq15item} to single value "FAQ15item" get of "plugins/FAQs/faqs.yml"
+		format slot 26 of player with {_faqs.faq15item} named "&b%{faqs.faq15name}%" with lore "&7%{faqs.faq15lore}%" to close then run [send "&b%{faqs.faq15url}%"]
 		
 			
