@@ -10,7 +10,7 @@
 FAQ0item: 'iron block'
 FAQ0name: "Forums"
 FAQ0lore: "Link"
-FAQ0url: "https://legit.land"
+FAQ0url: "https://ourwebsite.com"
 
 FAQ1item: 'black stained glass pane'
 FAQ1name: " "
@@ -20,7 +20,7 @@ FAQ1url: ""
 FAQ2item: 'sign item'
 FAQ2name: "Lockette"
 FAQ2lore: "Tutorial"
-FAQ2url: "https://www.youtube.com/watch?v=CVcU_ZPgF0E"
+FAQ2url: "https://ourwebsite.com/tutorial"
 
 FAQ3item: 'black stained glass pane'
 FAQ3name: " "
@@ -30,7 +30,7 @@ FAQ3url: ""
 FAQ4item: 'chest'
 FAQ4name: "Shopkeepers"
 FAQ4lore: "Tutorial"
-FAQ4url: "https://www.youtube.com/watch?v=ZhLjm6YXWK4t=286"
+FAQ4url: "https://ourwebsite.com/tutorial"
 
 FAQ5item: 'black stained glass pane'
 FAQ5name: " "
@@ -40,7 +40,7 @@ FAQ5url: ""
 FAQ6item: 'minecart item'
 FAQ6name: "Leave of Absence"
 FAQ6lore: "Taking a Break?"
-FAQ6url: "https://legit.land/absence"
+FAQ6url: "https://ourwebsite.com/absense"
 
 FAQ7item: 'black stained glass pane'
 FAQ7name: " "
@@ -50,7 +50,7 @@ FAQ7url: ""
 FAQ8item: 'map'
 FAQ8name: "Bug Tracker"
 FAQ8lore: "Submit Bugs"
-FAQ8url: "https://legit.land/support"
+FAQ8url: "https://ourwebsite.com/bugtracker"
 
 FAQ9item: 'black stained glass pane'
 FAQ9name: " "
@@ -58,9 +58,9 @@ FAQ9lore: ""
 FAQ9url: ""
 
 FAQ10item: 'iron ingot'
-FAQ10name: Silver Plus Rank"
-FAQ10lore: Details"
-FAQ10url: https://legit.land/forum/view_topic/?tid=8"
+FAQ10name: "Silver Plus Rank"
+FAQ10lore: "Details"
+FAQ10url: "https://ourwebsite.com/ranks"
 
 FAQ11item: 'black stained glass pane'
 FAQ11name: " "
@@ -80,17 +80,17 @@ FAQ13url: ""
 FAQ14item: 'beacon'
 FAQ14name: "Streamer Rank"
 FAQ14lore: "Apply for it here!"
-FAQ14url: "http://legitland.com/Thread-Twitch-Streamer-Rank-Apply-Within"
+FAQ14url: "https://ourwebsite.com/streamer"
 
 FAQ15item: 'black stained glass pane'
 FAQ15name: " "
 FAQ15lore: ""
 FAQ15url: ""
 
-FAQ16item: 'iron ingot'
-FAQ16name: "Silver Plus Rank"
+FAQ16item: 'gold ingot'
+FAQ16name: "Gold Plus Rank"
 FAQ16lore: "Details"
-FAQ16url: "https://legit.land/forum/view_topic/?tid=8"
+FAQ16url: "https://ourwebsite.com/ranks"
 
 FAQ17item: 'black stained glass pane'
 FAQ17name: " "
@@ -110,7 +110,7 @@ FAQ19url: ""
 FAQ20item: 'beacon'
 FAQ20name: "Streamer Rank"
 FAQ20lore: "Apply for it here!"
-FAQ20url: "http://legitland.com/Thread-Twitch-Streamer-Rank-Apply-Within"
+FAQ20url: "https://ourwebsite.com/"
 
 FAQ21item: 'black stained glass pane'
 FAQ21name: " "
@@ -120,7 +120,7 @@ FAQ21url: ""
 FAQ22item: 'gold ingot'
 FAQ22name: "Gold Plus Rank"
 FAQ22lore: "Details"
-FAQ22url: "https://legit.land/forum/view_topic/?tid=8"
+FAQ22url: "https://ourwebsite.com/ranks"
 
 FAQ23item: 'black stained glass pane'
 FAQ23name: " "
@@ -130,7 +130,7 @@ FAQ23url: ""
 FAQ24item: 'nether star'
 FAQ24name: "YouTube Rank"
 FAQ24lore: "Apply for it here!"
-FAQ24url: "https://legit.land/youtube-application"
+FAQ24url: "https://ourwebsite.com/tutorial"
 
 FAQ25item: 'black stained glass pane'
 FAQ25name: " "
@@ -140,4 +140,4 @@ FAQ25url: ""
 FAQ26item: 'diamond'
 FAQ26name: "MIT"
 FAQ26lore: "Apply for MIT!"
-FAQ26url: "https://legit.land/apply"
+FAQ26url: "https://ourwebsite.com/apply"
