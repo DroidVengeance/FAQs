@@ -23,14 +23,11 @@ on script load:
 	send "&c&m-----------------------------------------------------" to the console
 	if folder "plugins/FAQs" doesn't exists:
 		create folder "plugins/FAQs"
-		send "%colored {faqs.prefix}% &fCreating folder..." to the console
-	if file "plugins/FAQs/config.yml" doesn't exists:
-	if file "plugins/FAQs/messages.yml" doesn't exists:
+		send "&2[&aFAQs&2] &fCreating folder..." to the console
+	if file "plugins/FAQs/faqs.yml" doesn't exists:
 		download from "https://bit.ly/2xh2VuP" to "plugins/FAQs/faqs.yml"
-		send "%colored {faqs.prefix}% &fGenerating faqs.yml..." to the console
-		send "%colored {faqs.prefix}% &2DONE!!" to the console
-		send "" to the console
-	send "%colored {faqs.prefix}% &fGrabbing all FAQs..." to the console
+		send "&2[&aFAQs&2] &fGenerating faqs.yml..." to the console
+	send "&2[&aFAQs&2] &fGrabbing all FAQs..." to the console
 #	if {faqs.faq1Item} is not set:
 #		set {faqs.faq1Item} to single value "FAQ1.item" get of "plugins/FAQs/faqs.yml"
 #	if {faqs.faq1Name} is not set:
@@ -86,16 +83,22 @@ on script load:
 #		send "%colored {faqs.prefix}% The most recent Version: &d%{faqs.version}%" to the console
 
 	loop 15 times:
-		set {_count} to {_count}+1
-		if {faqs.faq%{_count}%Item} is not set:
-			set {faqs.faq%{_count}%Item} to single value "FAQ%{_count}%.item" get of "plugins/FAQs/faqs.yml"
-		if {faqs.faq%{_count}%Name} is not set:
-			set {faqs.faq%{_count}%Name} to single value "FAQ%{_count}%.name" get of "plugins/FAQs/faqs.yml"
-		if {faqs.faq%{_count}%Lore} is not set:
-			set {faqs.faq%{_count}%Lore} to single value "FAQ%{_count}%.lore" get of "plugins/FAQs/faqs.yml"
-		if {faqs.faq%{_count}%URL} is not set:
-			set {faqs.faq%{_count}%URL} to single value "FAQ%{_count}%.url" get of "plugins/FAQs/faqs.yml"
-		send "FAQ%{_count}%" to the console
+		set {faqs.count} to {faqs.count}+1
+		#if {faqs.faq%{_count}%item} is not set:
+		set {faqs.%{faqs.count}%item} to skutil yaml value "FAQ%{faqs.count}%.item" from file "plugins/FAQs/faqs.yml"
+		send "{faqs.%{faqs.count}%item}" to the console
+		#if {faqs.faq%{_count}%name} is not set:
+		set {faqs.%{faqs.count}%name} to skutil yaml value "FAQ%{faqs.count}%.name" from file "plugins/FAQs/faqs.yml"
+		send "{faqs.%{faqs.count}%item}" to the console
+		#if {faqs.faq%{_count}%lore} is not set:
+		set {faqs.%{faqs.count}%lore} to skutil yaml value "FAQ%{faqs.count}%.lore" from file "plugins/FAQs/faqs.yml"
+		send "{faqs.%{faqs.count}%item}" to the console
+		#if {faqs.faq%{_count}%url} is not set:
+		set {faqs.%{faqs.count}%url} to skutil yaml value "FAQ%{faqs.count}%.url" from file "plugins/FAQs/faqs.yml"
+		send "{faqs.%{faqs.count}%item}" to the console
+		send "FAQ%{faq.count}%" to the console
+	send "&2[&aFAQs&2] &2DONE!!" to the console
+	delete {faqs.count}
 		
 
 
@@ -109,18 +112,31 @@ command /faqs:
 	trigger:
 		wait 1 tick
 		open chest with 3 rows named "Frequently Asked Questions" to the player
-		set slot 0 of player with {@faq1item} named "&b{@faq1name}" with lore "&7{@faq1lore}" to close then run [send "&b{@faq1url}" to the player]
-		set slot 2 of player with {@faq2item} named "&b{@faq2name}" with lore "&7{@faq2lore}" to close then run [send "&b{@faq2url}" to the player]
-		set slot 4 of player with {@faq3item} named "&b{@faq3name}" with lore "&7{@faq3lore}" to close then run [send "&b{@faq3url}" to the player]
-		set slot 6 of player with {@faq4item} named "&b{@faq4name}" with lore "&7{@faq4lore}" to close then run [send "&b{@faq4url}" to the player]
-		set slot 8 of player with {@faq5item} named "&b{@faq5name}" with lore "&7{@faq5lore}" to close then run [send "&b{@faq5url}" to the player]
-		set slot 10 of player with {@faq6item} named "&b{@faq6name}" with lore "&7{@faq6lore}" to close then run [send "&b{@faq6url}" to the player]
-		set slot 12 of player with {@faq7item} named "&b{@faq7name}" with lore "&7{@faq7lore}" to close then run [send "&b{@faq7url}" to the player]
-		set slot 14 of player with {@faq8item} named "&b{@faq8name}" with lore "&7{@faq8lore}" to close then run [send "&b{@faq8url}" to the player]
-		set slot 16 of player with {@faq9item} named "&b{@faq9name}" with lore "&7{@faq9lore}" to close then run [send "&b{@faq9url}" to the player]
-		set slot 18 of player with {@faq10item} named "&b{@faq10name}" with lore "&7{@faq10lore}" to close then run [send "&b{@faq10url}" to the player]
-		set slot 20 of player with {@faq11item} named "&b{@faq11name}" with lore "&7{@faq11lore}" to close then run [send "&b{@faq11url}" to the player]
-		set slot 22 of player with {@faq12item} named "&b{@faq12name}" with lore "&7{@faq12lore}" to close then run [send "&b{@faq12url}" to the player]
-		set slot 24 of player with {@faq13item} named "&b{@faq13name}" with lore "&7{@faq13lore}" to close then run [send "&b{@faq13url}" to the player]
-		set slot 25 of player with {@faq13.5item} named "&b{@faq13.5name}" with lore "&7{@faq13.5lore}" to close then run [send "&b{@faq13.5url}" to the player]
-		set slot 26 of player with {@faq14item} named "&b{@faq14name}" with lore "&7{@faq14lore}" to close then run [send "&b{@faq14url}" to the player]		
+		format slot 0 of player with {faqs.faq1item} named "&b%{faqs.faq1name}%" with lore "&7%{faqs.faq1lore}%" to close then run [send "&b%{faqs.faq1url}%" to the player]
+		format slot 2 of player with {faqs.faq2item} named "&b%{faqs.faq2name}%" with lore "&7%{faqs.faq2lore}%" to close then run [send "&b%{faqs.faq2url}%" to the player]
+		format slot 4 of player with {faqs.faq3item} named "&b%{faqs.faq3name}%" with lore "&7%{faqs.faq3lore}%" to close then run [send "&b%{faqs.faq3url}%" to the player]
+		format slot 6 of player with {faqs.faq4item} named "&b%{faqs.faq4name}%" with lore "&7%{faqs.faq4lore}%" to close then run [send "&b%{faqs.faq4url}%" to the player]
+		format slot 8 of player with {faqs.faq5item} named "&b%{faqs.faq5name}%" with lore "&7%{faqs.faq5lore}%" to close then run [send "&b%{faqs.faq5url}%" to the player]
+		format slot 10 of player with {faqs.faq6item} named "&b%{faqs.faq6name}%" with lore "&7%{faqs.faq6lore}%" to close then run [send "&b%{faqs.faq6url}%" to the player]
+		format slot 12 of player with {faqs.faq7item} named "&b%{faqs.faq7name}%" with lore "&7%{faqs.faq7lore}%" to close then run [send "&b%{faqs.faq7url}%" to the player]
+		format slot 14 of player with {faqs.faq8item} named "&b%{faqs.faq8name}%" with lore "&7%{faqs.faq8lore}%" to close then run [send "&b%{faqs.faq8url}%" to the player]
+		format slot 16 of player with {faqs.faq9item} named "&b%{faqs.faq9name}%" with lore "&7%{faqs.faq9lore}%" to close then run [send "&b%{faqs.faq9url}%" to the player]
+		format slot 18 of player with {faqs.faq10item} named "&b%{faqs.faq10name}%" with lore "&7%{faqs.faq10lore}%" to close then run [send "&b%{faqs.faq10url}%" to the player]
+		format slot 20 of player with {faqs.faq11item} named "&b%{faqs.faq11name}%" with lore "&7%{faqs.faq11lore}%" to close then run [send "&b%{faqs.faq11url}%" to the player]
+		format slot 22 of player with {faqs.faq12item} named "&b%{faqs.faq12name}%" with lore "&7%{faqs.faq12lore}%" to close then run [send "&b%{faqs.faq12url}%" to the player]
+		format slot 24 of player with {faqs.faq13item} named "&b%{faqs.faq13name}%" with lore "&7%{faqs.faq13lore}%" to close then run [send "&b%{faqs.faq13url}%" to the player]
+		format slot 25 of player with {faqs.faq14item} named "&b%{faqs.faq14name}%" with lore "&7%{faqs.faq14lore}%" to close then run [send "&b%{faqs.faq14url}%" to the player]
+		format slot 26 of player with {faqs.faq15item} named "&b%{faqs.faq15name}%" with lore "&7%{faqs.faq15lore}%" to close then run [send "&b%{faqs.faq15url}%" to the player]		
+		
+command faqsdelete:
+	executable by: console
+	trigger:
+		loop 15 times:
+			set {_count} to {_count}+1
+			delete {faqs.faq%{_count}%item}
+			delete {faqs.faq%{_count}%name}
+			delete {faqs.faq%{_count}%lore}
+			delete {faqs.faq%{_count}%url}
+			send "FAQ%{_count}% Deleted!" to the console
+		
+			

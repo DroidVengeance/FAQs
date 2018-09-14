@@ -7,34 +7,54 @@
 # By: DroidVengeance
 
 FAQ1:
-  - item: emerald block
-  - name: Forums
-  - lore: Link
-  - url: https://legit.land
+  item:
+    - emerald block
+  name:
+    - Forums
+  lore:
+    - Link
+  url:
+    - https://legit.land
 
 FAQ2:
-  - item: sign item
-  - name: Lockette
-  - lore: Tutorial
-  - url: https://www.youtube.com/watch?v=CVcU_ZPgF0E
+  item:
+    - sign item
+  name:
+    - Lockette
+  lore:
+    - Tutorial
+  url:
+    - https://www.youtube.com/watch?v=CVcU_ZPgF0E
 
 FAQ3:
-  - item: gold block
-  - name: Trading
-  - lore: Essentials
-  - url: https://www.youtube.com/watch?v=QtEE_f410x0
+  item:
+    - gold block
+  name:
+    - Trading
+  lore:
+    - Essentials
+  url:
+    - https://www.youtube.com/watch?v=QtEE_f410x0
 
 FAQ4:
-  - item: chest
-  - name: Shopkeepers
-  - lore: Tutorial
-  - url: https://www.youtube.com/watch?v=ZhLjm6YXWK4t=286
+  item:
+    - chest
+  name:
+    - Shopkeepers
+  lore:
+    - Tutorial
+  url:
+    - https://www.youtube.com/watch?v=ZhLjm6YXWK4t=286
 
 FAQ5:
-  - item: eye of ender
-  - name: Want better FPS?
-  - lore: Optifine+17047433518
-  - url: http://www.optifine.net
+  item:
+    - eye of ender
+  name:
+    - Want better FPS?
+  lore:
+    - Optifine+17047433518
+  url:
+    - http://www.optifine.net
 
 FAQ6:
   - item: minecart item
